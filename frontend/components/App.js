@@ -1,4 +1,7 @@
 import React from 'react'
+import TodoList from './TodoList';
+import Form from './Form';
+
 
 const todos = [
 
@@ -28,19 +31,8 @@ export default class App extends React.Component {
     return (
       <div>
         <h1>Todos</h1>
-        <ul>
-          {
-            todos.map(todo => {
-              return (<li>{todo.name}</li>)
-            })
-          }
-        </ul>
-        
-        <form>
-          <input />
-          <button>Add</button>
-          <button>Clear Out Completed</button>
-        </form>
+        <TodoList todos={todos}/>
+        <Form />
       </div>
     )
   }
